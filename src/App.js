@@ -1,6 +1,9 @@
 import { Block } from './components/input';
 import './App.css';
 import React, { useEffect, useRef } from 'react';
+import { Header } from './components/header';
+import coins from './image/iconExchange/coins.svg'
+import transfer from './image/iconExchange/transfer.svg'
 
 
 function App() {
@@ -51,20 +54,34 @@ function App() {
 
   return (
     <div className="App">
-      <Block value={fromValue}
-        currency={fromCurrency}
-        onChangeCurrency={setFromCurrency}
-        onChangeValue={changeFromPrice}>
-      </Block>
-      <Block
-        value={toValue}
-        currency={toCurrency}
-        onChangeCurrency={setToCurrency}
-        onChangeValue={changeToPrice}
-      >
-
-      </Block>
-      <div></div>
+      <Header name={ratesRef.current[1]}></Header>
+      <div className='main'>
+        <div className='headerText'>
+          <img className='coins' src={coins}></img>
+          <div className='text'>
+            <div className='title'>Currency</div>
+            <div className='subTitle'>EXCHANGE</div>
+          </div>
+        </div>
+        <div className='blockBody'>
+          <Block value={fromValue}
+            currency={fromCurrency}
+            onChangeCurrency={setFromCurrency}
+            onChangeValue={changeFromPrice}>
+          </Block>
+          <div className='eclipseBlock'>
+            <div className='eclipseBody'>
+              <img className='eclipse' src={transfer}></img>
+            </div>
+          </div>
+          <Block
+            value={toValue}
+            currency={toCurrency}
+            onChangeCurrency={setToCurrency}
+            onChangeValue={changeToPrice}>
+          </Block>
+        </div>
+      </div>
     </div>
   );
 }

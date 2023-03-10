@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+.App{
+    font-family: 'Inter', sans-serif;
+}
+.main{
+    height: 85vh;
+    padding: 30px 0 0 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 0;
+}
+.eclipseBlock{
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 0px 40px 0;
+}
+.eclipseBody{
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.eclipse{
+
+    background-color: white;
+    width: 30px;
+}
+.coins{
+    width: 100px;
+
+}
+.headerText{
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    
+}
+.text{
+    margin-left: 20px;
+}
+.title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+
+}
+.subTitle{
+    font-weight: lighter;
+    font-size: 30px;
+}
